@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+
+        <!--Inline CSS-->
+        <style>
+            body{
+                font-family:Arial;
+                background:linear-gradient(to right,#00f2fe)
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                height: 100vh;
+             }
+
+            .login-box{
+                background:white;
+                padding:30px;
+                border-radius:10px;
+                width:300px;
+                text-align:center;
+                box-shadow:0 0 10px rgba(0,0,0,0,2);
+             }
+
+             h2{
+                margin-bottom: 20px;
+             }
+
+             input{
+                width: 90%;
+                padding: 10px;
+                margin:10px 0;
+                border:1px solid #ccc;
+                border-radius:5px;
+                }
+        
+            button{
+                width:95%;
+                padding:10px;
+                background: #4facfe;
+                border:none;
+                color:white;
+                font-size:16px;
+                border-radius: 5px;
+                cursor:pointer
+            }
+
+            button:hover{
+                background:#00c6ff;
+            }
+    
+            .error{
+                color:red;
+                font-size: 14px;
+            }       
+            </style>
+            </head>
+        
+            <body>
+
+                <div class="login-box">
+                    <h2>Login</h2>
+
+                    <input type="text" id="username" placeholder="Enter Username">
+                    <input type="password"id="password" placeholder="enter password">
+
+                    <button onclick="login()">login</button>
+
+                    <p class="error"id="errorMsg"></p>
+                    </div>
+           
+                <!--Inline Javascript-->
+                <script>
+                  function login (){
+                    var user = document_getelementbyid("username");value;
+                    var user = document_getelementbypassword("password");valu;
+                    //Dummy credentials
+                    var correctUser="admin";
+                    var correctPass="1234";
+                    
+                    if(user===""||pass===""){
+                        document.getElementById("errorMsg").innerText="Please fill all fields";
+                    }
+                    else if(user===correctUser&&pass===correctPass){
+                        alert("Login Successfull");
+                    }
+                    else {
+                        document.getElementById("errorMsg").innerText="Invalid Username or Password"
+                    }
+                  }      
+                  </script> 
+                  </body>
+                  </html>
